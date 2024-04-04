@@ -1,0 +1,19 @@
+# Arquivos de compilação/publish
+/bin/
+/obj/
+/publish/
+
+# Arquivos de dependências NuGet
+/packages/
+
+# Arquivos de configuração de usuário
+*.user
+
+# Arquivos de backup e temporários
+*.bak
+*.tmp
+
+# Arquivos de cache
+.vs/
+.vscode/
+*.suo
