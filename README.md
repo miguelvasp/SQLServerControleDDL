@@ -1,5 +1,5 @@
 # SQLServerControleDDL
-Projeto em Angular e .Net que usa scripts XML para cada alteração do banco de dados controlando as alterações que cada usuário do banco realizou em tabelas, procedures, funções, etc. Permitindo manter um histórico de alterações dos objetos de banco de dados
+Projeto em .Net que usa scripts XML para cada alteração do banco de dados controlando as alterações que cada usuário do banco realizou em tabelas, procedures, funções, etc. Permitindo manter um histórico de alterações dos objetos de banco de dados
 
 ![image](https://github.com/miguelvasp/SQLServerControleDDL/assets/14856283/e64a83b9-a369-4913-9797-d49b3f4eb02c)
 
