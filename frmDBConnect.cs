@@ -1,7 +1,10 @@
-﻿namespace SQLServerControlVersion
+﻿using SQLServerControlVersion.Models;
+
+namespace SQLServerControlVersion
 {
     public partial class frmDBConnect : Form
     {
+        public List<Conexao> ConexoesCadastradas = new List<Conexao>();
         public string Server { get; set; }
         public string User { get; set; }
         public string Password { get; set; }
@@ -9,8 +12,9 @@
         public bool DadosOk { get; set; }
 
 
-        public frmDBConnect()
+        public frmDBConnect(List<Conexao> cnnCad)
         {
+            ConexoesCadastradas = cnnCad;
             InitializeComponent();
         }
 
@@ -30,5 +34,33 @@
                 this.Close();
             }
         }
+
+        private void frmDBConnect_Load(object sender, EventArgs e)
+        {
+            cboConexoes.Items.Clear();
+            cboConexoes.Items.Add("");
+            foreach (var con in ConexoesCadastradas)
+            {
+                cboConexoes.Items.Add(con.Alias);
+            }
+        }
+
+        private void cboConexoes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedValue = cboConexoes.SelectedItem.ToString();
+            if (!string.IsNullOrEmpty(selectedValue))
+            {
+                var conexaoSelecionada = ConexoesCadastradas.Where(_ => _.Alias == selectedValue).FirstOrDefault();
+                if (conexaoSelecionada != null)
+                {
+                    txtServer.Text = conexaoSelecionada.Server;
+                    txtUser.Text = conexaoSelecionada.User;
+                    txtPassword.Text = conexaoSelecionada.Password;
+                    txtDatabase.Text = conexaoSelecionada.database;
+                }
+            }
+        }
     }
+
+
 }
