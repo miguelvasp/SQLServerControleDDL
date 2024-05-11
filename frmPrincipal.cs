@@ -180,6 +180,11 @@ namespace SQLServerControlVersion
 
         private void dgvHistorico_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dgvHistorico_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             int Id = Convert.ToInt32(dgvHistorico.Rows[dgvHistorico.SelectedRows[0].Index].Cells[0].Value);
             var obj = lista.Where(_ => _.Id == Id).FirstOrDefault();
             if (obj != null)

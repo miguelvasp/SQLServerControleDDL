@@ -36,15 +36,15 @@ namespace SQLServerControlVersion
             toolStripButton1 = new ToolStripButton();
             toolStripButton3 = new ToolStripButton();
             dgvHistorico = new DataGridView();
-            txtCmd = new TextBox();
-            toolStrip2 = new ToolStrip();
-            txtObjeto = new ToolStripLabel();
             Id = new DataGridViewTextBoxColumn();
             Nm_Servidor = new DataGridViewTextBoxColumn();
             Nm_Database = new DataGridViewTextBoxColumn();
             Dt_Alteracao = new DataGridViewTextBoxColumn();
             Nm_Login = new DataGridViewTextBoxColumn();
             Tp_Evento = new DataGridViewTextBoxColumn();
+            txtCmd = new TextBox();
+            toolStrip2 = new ToolStrip();
+            txtObjeto = new ToolStripLabel();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -140,40 +140,8 @@ namespace SQLServerControlVersion
             dgvHistorico.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvHistorico.Size = new Size(1593, 213);
             dgvHistorico.TabIndex = 5;
+            dgvHistorico.CellClick += dgvHistorico_CellClick_1;
             dgvHistorico.CellContentClick += dgvHistorico_CellContentClick;
-            // 
-            // txtCmd
-            // 
-            txtCmd.BackColor = Color.White;
-            txtCmd.Dock = DockStyle.Top;
-            txtCmd.Font = new Font("Segoe UI", 14F);
-            txtCmd.ForeColor = Color.Black;
-            txtCmd.Location = new Point(0, 55);
-            txtCmd.Multiline = true;
-            txtCmd.Name = "txtCmd";
-            txtCmd.ScrollBars = ScrollBars.Both;
-            txtCmd.Size = new Size(1593, 771);
-            txtCmd.TabIndex = 4;
-            // 
-            // toolStrip2
-            // 
-            toolStrip2.AutoSize = false;
-            toolStrip2.BackgroundImage = (Image)resources.GetObject("toolStrip2.BackgroundImage");
-            toolStrip2.ImageScalingSize = new Size(20, 20);
-            toolStrip2.Items.AddRange(new ToolStripItem[] { txtObjeto });
-            toolStrip2.Location = new Point(0, 0);
-            toolStrip2.Name = "toolStrip2";
-            toolStrip2.Size = new Size(1593, 55);
-            toolStrip2.TabIndex = 3;
-            toolStrip2.Text = "toolStrip2";
-            // 
-            // txtObjeto
-            // 
-            txtObjeto.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
-            txtObjeto.ForeColor = Color.White;
-            txtObjeto.Name = "txtObjeto";
-            txtObjeto.Size = new Size(70, 52);
-            txtObjeto.Text = "Objeto";
             // 
             // Id
             // 
@@ -228,6 +196,39 @@ namespace SQLServerControlVersion
             Tp_Evento.Name = "Tp_Evento";
             Tp_Evento.ReadOnly = true;
             Tp_Evento.Width = 200;
+            // 
+            // txtCmd
+            // 
+            txtCmd.BackColor = Color.White;
+            txtCmd.Dock = DockStyle.Top;
+            txtCmd.Font = new Font("Segoe UI", 14F);
+            txtCmd.ForeColor = Color.Black;
+            txtCmd.Location = new Point(0, 55);
+            txtCmd.Multiline = true;
+            txtCmd.Name = "txtCmd";
+            txtCmd.ScrollBars = ScrollBars.Both;
+            txtCmd.Size = new Size(1593, 771);
+            txtCmd.TabIndex = 4;
+            // 
+            // toolStrip2
+            // 
+            toolStrip2.AutoSize = false;
+            toolStrip2.BackgroundImage = (Image)resources.GetObject("toolStrip2.BackgroundImage");
+            toolStrip2.ImageScalingSize = new Size(20, 20);
+            toolStrip2.Items.AddRange(new ToolStripItem[] { txtObjeto });
+            toolStrip2.Location = new Point(0, 0);
+            toolStrip2.Name = "toolStrip2";
+            toolStrip2.Size = new Size(1593, 55);
+            toolStrip2.TabIndex = 3;
+            toolStrip2.Text = "toolStrip2";
+            // 
+            // txtObjeto
+            // 
+            txtObjeto.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold);
+            txtObjeto.ForeColor = Color.White;
+            txtObjeto.Name = "txtObjeto";
+            txtObjeto.Size = new Size(70, 52);
+            txtObjeto.Text = "Objeto";
             // 
             // frmPrincipal
             // 
